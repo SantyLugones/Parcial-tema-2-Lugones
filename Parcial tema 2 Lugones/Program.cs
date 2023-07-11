@@ -2,36 +2,35 @@
 
 do
 {
-    do
-    {
-        Console.WriteLine("ingrese el valor de la altura de la piramide cuadrada");
-        var str = Console.ReadLine();
-        if (double.TryParse(str, out altura))
+    do { 
+        do
         {
-            if (altura > 0)
+            Console.WriteLine("ingrese el valor de la altura de la piramide cuadrada");
+            var str = Console.ReadLine();
+            if (double.TryParse(str, out altura))
             {
                 break;
             }
-            Console.WriteLine("Los Datos no pueden ser inferior a 0 (negativos)");
-        }
-        Console.WriteLine("Número no válido");
+            Console.WriteLine("Número no válido");
 
-    } while (true);
+        } while (true);
 
-    do
-    {
-        Console.WriteLine("ingrese el valor de la base de la piramide cuadrada");
-        var str = Console.ReadLine();
-        if (double.TryParse(str, out Base))
+        do
         {
-            if(Base > 0)
+            Console.WriteLine("ingrese el valor de la base de la piramide cuadrada");
+            var str = Console.ReadLine();
+            if (double.TryParse(str, out Base))
             {
                 break;
             }
+            Console.WriteLine("Número no válido");
+
+        } while (true);
+        if (Base < 0 || altura < 0)
+        {
             Console.WriteLine("Los Datos no pueden ser inferior a 0 (negativos)");
         }
-        Console.WriteLine("Número no válido");
-
+        break;
     } while (true);
 
 
