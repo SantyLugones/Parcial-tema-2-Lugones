@@ -8,7 +8,11 @@ do
         var str = Console.ReadLine();
         if (double.TryParse(str, out altura))
         {
-            break;
+            if (altura > 0)
+            {
+                break;
+            }
+            Console.WriteLine("Los Datos no pueden ser inferior a 0 (negativos)");
         }
         Console.WriteLine("Número no válido");
 
@@ -20,17 +24,16 @@ do
         var str = Console.ReadLine();
         if (double.TryParse(str, out Base))
         {
-            break;
+            if(Base > 0)
+            {
+                break;
+            }
+            Console.WriteLine("Los Datos no pueden ser inferior a 0 (negativos)");
         }
         Console.WriteLine("Número no válido");
 
     } while (true);
 
-    if (altura < 0 || Base < 0)
-    {
-        Console.WriteLine("Los Datos no pueden ser inferior a 0 (negativos)");
-        break;
-    }
 
     if(altura ==0 && Base == 0)
     {
